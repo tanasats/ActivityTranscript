@@ -8,6 +8,9 @@ import { FooterComponent } from './common/footer/footer.component';
 import { HomeComponent } from './common/home/home.component';
 import { LoginComponent } from './common/login/login.component';
 
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +21,10 @@ import { LoginComponent } from './common/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
