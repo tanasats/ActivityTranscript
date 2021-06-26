@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
   { path: 'home', component: HomeComponent },
   { path: 'login', component: LoginComponent },
+  {path:'admin',loadChildren:()=>import('./admin/admin-routing.module').then(m=>m.AdminRoutingModule)},
 ];
 
 @NgModule({
