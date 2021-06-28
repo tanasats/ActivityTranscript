@@ -31,8 +31,10 @@
                             <td class="d-none d-md-table-cell">{{user.email}}</td>
                             <td class="d-none d-md-table-cell">{{user.password|slice:0:5}}...</td>
                             <td>
-                                <button class="btn btn-success btn-sm" (click)="onUpdate(user.id)">edit</button>&nbsp;
-                                <button class="btn btn-danger btn-sm" (click)="onDelete(user.id)">del</button>
+                                <button class="btn btn-sm btn-success py-0 px-1 m-1" (click)="onUpdate(user.id)">
+                                    <mat-icon>edit</mat-icon>
+                                    </button>
+                                <button class="btn btn-sm btn-danger py-0 px-1 mx-1" (click)="onDelete(user.id)"><mat-icon>delete</mat-icon></button>
                             </td>
                         </tr>
                     </tbody>

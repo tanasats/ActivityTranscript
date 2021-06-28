@@ -6,8 +6,8 @@ import {
   HttpErrorResponse,
   HttpHeaders,
 } from '@angular/common/http';
-const apiURL = 'http://localhost:3000/api/v1/user';
-//const apiURL = 'http://192.168.1.51:3000/api/v1/user';
+const endpoint = 'http://localhost:3000/api/v1/user';
+//const endpoint = 'http://192.168.1.51:3000/api/v1/user';
 
 @Injectable({
   providedIn: 'root',
@@ -42,27 +42,27 @@ export class UserService {
 
   getAll(): Observable<any> {
     return this.http
-      .get(apiURL + 's', this.httpOptions)
+      .get(endpoint + 's', this.httpOptions)
       .pipe(catchError(this.handleError));
   }
   getById(id: any): Observable<any> {
     return this.http
-      .get(apiURL + '/' + id, this.httpOptions)
+      .get(endpoint + '/' + id, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
   insert(data: any): Observable<any> {
     return this.http
-      .post<any>(apiURL, data, this.httpOptions)
+      .post<any>(endpoint, data, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
   delete(id: any): Observable<any> {
     return this.http
-      .delete(apiURL + '/' + id, this.httpOptions)
+      .delete(endpoint + '/' + id, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
   update(id: any, data: any): Observable<any> {
     return this.http
-      .put(apiURL + '/' + id, data, this.httpOptions)
+      .put(endpoint + '/' + id, data, this.httpOptions)
       .pipe(catchError(this.handleError));
   }
 }
